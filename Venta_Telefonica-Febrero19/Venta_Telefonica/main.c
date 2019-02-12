@@ -33,6 +33,8 @@ int main()
             {
             case 1:
                 cargarDesdeArchivo(ListaVentas,NOM_ARCH);
+                break;
+            case 2:
                 if(ListaVentas !=NULL)
                 {
                      vista_MuestraElementos(ListaVentas,"LISTA DE VENTAS","POR VENDEDORES",vista_MuestraUnElemento,0,ListaVentas->len(ListaVentas),25);
@@ -40,9 +42,8 @@ int main()
                 }
                 else
                     printf("NADA PARA MOSTRAR");
-                   // pause();
-                break;
-            case 2:
+                    break;
+                case 3:
                 if(al_map(ListaVentas,CalcularSalary)==1)
                  {
                        printf("Se pudieron calcular todas las comisiones\n");
@@ -54,9 +55,8 @@ int main()
                     else
                         printf("No se pudieron calcular todos\n");
                     break;
+            case 4:
 
-
-            case 3:
                 break;
             case 0:
                 seguir='N';
