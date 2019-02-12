@@ -1,0 +1,159 @@
+# depslib dependency file v1.0
+1549666868 source:c:\test\venta_telefonica\ventas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Ventas.h"
+	"Gestion.h"
+	"Tools.h"
+	"Vista.h"
+
+1549667020 source:c:\test\venta_telefonica\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Ventas.h"
+	"Tools.h"
+	"Vista.h"
+
+1549665244 c:\test\venta_telefonica\arraylist.h
+
+1549667259 c:\test\venta_telefonica\ventas.h
+
+1549665244 c:\test\venta_telefonica\tools.h
+
+1549667065 c:\test\venta_telefonica\vista.h
+
+1549666650 source:c:\test\venta_telefonica\archivo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Ventas.h"
+	"Gestion.h"
+	"Tools.h"
+	"Vista.h"
+
+1549665244 c:\test\venta_telefonica\gestion.h
+
+1549659067 source:c:\test\venta_telefonica\tools.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Estructura.h"
+	"Gestion.h"
+	"Vista.h"
+
+1549657029 c:\test\venta_telefonica\archivo.h
+
+1549655169 c:\test\venta_telefonica\estructura.h
+
+1549666917 source:c:\test\venta_telefonica\vista.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Ventas.h"
+	"Gestion.h"
+	"Tools.h"
+
+1549662222 source:c:\test\venta_telefonica\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1549665244 source:c:\test\venta_telefonica\gestion.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Estructura.h"
+	"Tools.h"
+	"Vista.h"
+
+1549969406 source:c:\eli\utn\finales febrero 19\venta_telefonica-20190211t124402z-001\venta_telefonica\archivo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Ventas.h"
+	"Gestion.h"
+	"Tools.h"
+	"Vista.h"
+
+1549890914 c:\eli\utn\finales febrero 19\venta_telefonica-20190211t124402z-001\venta_telefonica\arraylist.h
+
+1549973124 c:\eli\utn\finales febrero 19\venta_telefonica-20190211t124402z-001\venta_telefonica\ventas.h
+
+1549890914 c:\eli\utn\finales febrero 19\venta_telefonica-20190211t124402z-001\venta_telefonica\gestion.h
+
+1549890914 c:\eli\utn\finales febrero 19\venta_telefonica-20190211t124402z-001\venta_telefonica\tools.h
+
+1549890913 c:\eli\utn\finales febrero 19\venta_telefonica-20190211t124402z-001\venta_telefonica\vista.h
+
+1549890914 source:c:\eli\utn\finales febrero 19\venta_telefonica-20190211t124402z-001\venta_telefonica\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1549890914 source:c:\eli\utn\finales febrero 19\venta_telefonica-20190211t124402z-001\venta_telefonica\gestion.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Estructura.h"
+	"Tools.h"
+	"Vista.h"
+
+1549890915 c:\eli\utn\finales febrero 19\venta_telefonica-20190211t124402z-001\venta_telefonica\archivo.h
+
+1549890914 c:\eli\utn\finales febrero 19\venta_telefonica-20190211t124402z-001\venta_telefonica\estructura.h
+
+1549971627 source:c:\eli\utn\finales febrero 19\venta_telefonica-20190211t124402z-001\venta_telefonica\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Ventas.h"
+	"Tools.h"
+	"Vista.h"
+
+1549890914 source:c:\eli\utn\finales febrero 19\venta_telefonica-20190211t124402z-001\venta_telefonica\tools.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Estructura.h"
+	"Gestion.h"
+	"Vista.h"
+
+1549977398 source:c:\eli\utn\finales febrero 19\venta_telefonica-20190211t124402z-001\venta_telefonica\ventas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Ventas.h"
+	"Gestion.h"
+	"Tools.h"
+	"Vista.h"
+
+1549975692 source:c:\eli\utn\finales febrero 19\venta_telefonica-20190211t124402z-001\venta_telefonica\vista.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Ventas.h"
+	"Gestion.h"
+	"Tools.h"
+
