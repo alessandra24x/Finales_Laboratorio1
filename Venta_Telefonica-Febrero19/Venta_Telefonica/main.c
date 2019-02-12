@@ -26,7 +26,7 @@ int main()
     {
         while(seguir=='S')
         {
-            vista_ShowMenu("\n1:Cargar Archivos\n2:Implementar el filtro\n3:Listar Ventas\n");
+            vista_ShowMenu("\n1:Cargar Archivos\n2:Listar Vendedores\n3:Calcular Comisiones\n4:Generar Archivo de Comisiones\n");
             scanf("%d",&opcion);
             tools_ValidaMenu(opcion,0,3);
             switch(opcion)
