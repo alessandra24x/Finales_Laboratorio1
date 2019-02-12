@@ -157,3 +157,82 @@
 	"Gestion.h"
 	"Tools.h"
 
+1549984399 source:c:\eli\utn\practica finales labi\finales_laboratorio1\venta_telefonica-febrero19\venta_telefonica\archivo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Ventas.h"
+	"Gestion.h"
+	"Tools.h"
+	"Vista.h"
+
+1549890914 c:\eli\utn\practica finales labi\finales_laboratorio1\venta_telefonica-febrero19\venta_telefonica\arraylist.h
+
+1549983183 c:\eli\utn\practica finales labi\finales_laboratorio1\venta_telefonica-febrero19\venta_telefonica\ventas.h
+
+1549890914 c:\eli\utn\practica finales labi\finales_laboratorio1\venta_telefonica-febrero19\venta_telefonica\gestion.h
+
+1549890914 c:\eli\utn\practica finales labi\finales_laboratorio1\venta_telefonica-febrero19\venta_telefonica\tools.h
+
+1549890913 c:\eli\utn\practica finales labi\finales_laboratorio1\venta_telefonica-febrero19\venta_telefonica\vista.h
+
+1549890914 source:c:\eli\utn\practica finales labi\finales_laboratorio1\venta_telefonica-febrero19\venta_telefonica\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1549890914 source:c:\eli\utn\practica finales labi\finales_laboratorio1\venta_telefonica-febrero19\venta_telefonica\gestion.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Estructura.h"
+	"Tools.h"
+	"Vista.h"
+
+1549890915 c:\eli\utn\practica finales labi\finales_laboratorio1\venta_telefonica-febrero19\venta_telefonica\archivo.h
+
+1549890914 c:\eli\utn\practica finales labi\finales_laboratorio1\venta_telefonica-febrero19\venta_telefonica\estructura.h
+
+1549983963 source:c:\eli\utn\practica finales labi\finales_laboratorio1\venta_telefonica-febrero19\venta_telefonica\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Ventas.h"
+	"Tools.h"
+	"Vista.h"
+
+1549890914 source:c:\eli\utn\practica finales labi\finales_laboratorio1\venta_telefonica-febrero19\venta_telefonica\tools.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Estructura.h"
+	"Gestion.h"
+	"Vista.h"
+
+1549977398 source:c:\eli\utn\practica finales labi\finales_laboratorio1\venta_telefonica-febrero19\venta_telefonica\ventas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Ventas.h"
+	"Gestion.h"
+	"Tools.h"
+	"Vista.h"
+
+1549984152 source:c:\eli\utn\practica finales labi\finales_laboratorio1\venta_telefonica-febrero19\venta_telefonica\vista.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Ventas.h"
+	"Gestion.h"
+	"Tools.h"
+

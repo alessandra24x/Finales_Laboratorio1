@@ -166,6 +166,7 @@ int parserEstructura(FILE* pFile, ArrayList* this)
                     ventas_set_nivel(record,atoi(variable3));
                     ventas_set_CantVend(record,atoi(variable4));
                     ventas_set_monto(record,atof(variable5));
+                    ventas_set_comision(record, 0);  // <3 besou
 
                     al_add(this, record);
                     cantidadFilasLeidas++;

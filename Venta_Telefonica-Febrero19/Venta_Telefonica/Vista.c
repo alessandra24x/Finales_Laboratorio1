@@ -11,8 +11,8 @@
 
 
 #define MASCARA_IMPRIMIR "%d\t%d\t%d\t%.50s\t\n"
-#define MASCARA_IMPRIMIR2 "%4d\t%10s\t\t%d\t\t%d\t%12.2f\t%2.2f\n"
-#define MASCARA_IMPRIMIR3 "%4d\t%10s\t%2d\t%3d\t%2.2f\n"
+#define MASCARA_IMPRIMIR2 "%4d\t%10s\t%d\t\t%d\t%12.2f\t%2.2f\n"
+#define MASCARA_IMPRIMIR3 "%4d\t%10s\t%2d\t\t%3d\t\t%2.2f\n"
 
 void vista_ShowMenu(char *opcion)
 {
@@ -37,11 +37,9 @@ int vista_MuestraUnElemento(eVentas * record)
     int retorno=-1;
     if(record !=NULL)
     {
-       // printf("%f\n",record->comision);
-       // system("pause");
-       if(ventas_get_comision(record) ==0)
 
-         {
+       if(ventas_get_comision(record) ==0)// ESTA LINEA DEBE SER EL ERROR, EN EL CONSTRCUTOR PODRAIMOS INICIALIZAR A CERO LA COMISION
+                 {
                 retorno=0;
                 printf(MASCARA_IMPRIMIR3,ventas_get_id(record),ventas_get_nombre_vendedor(record),ventas_get_nivel(record),ventas_get_CantVend(record),ventas_get_monto(record));
             }

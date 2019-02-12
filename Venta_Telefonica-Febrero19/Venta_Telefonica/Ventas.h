@@ -15,7 +15,7 @@ typedef struct
 
 #endif // ESTRUCTURA_H_INCLUDED
 
-
+eVentas* nuevo_record(void);
 int CalcularSalary(eVentas* element);
 int ventas_set_monto(eVentas* this, float flotante);
 float ventas_get_monto(eVentas* this);
