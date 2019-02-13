@@ -35,6 +35,7 @@ int main()
             {
             case 1:
                 cargarDesdeArchivo(ListaVentas,NOM_ARCH);
+              //  vista_MuestraElementos(ListaVentas,"LISTA DE VENTAS","POR VENDEDORES",vista_MuestraUnElemento,0,ListaVentas->len(ListaVentas),25);
                 break;
             case 2:
                 if(ListaVentas !=NULL)
