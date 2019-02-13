@@ -57,3 +57,5 @@ void vista_ingresarTexto (char texto[], int cantTexto, char pregunta[]);
 int vista_MuestraUnElementoUsuario(void * record);
 //int vista_MuestraUnFEED(eFeed * record);
 //int Muestra1UnElementoSalario(eVentas * emp);
+
+int vista_Pedir_Nivel(int choice);

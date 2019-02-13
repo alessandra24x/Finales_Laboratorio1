@@ -96,6 +96,7 @@ int tools_PedirEntero(char mensaje[])
     return auxiliar;
 }
 
+
 /*int tools_ComparaFrases(char* frase1,char* frase2)
  {
     char aux[20]={};

@@ -119,3 +119,22 @@ void vista_ingresarTexto (char texto[], int cantTexto, char pregunta[])
     }
     strcpy(texto, auxtitulo);
 }
+
+int vista_Pedir_Nivel(int choice)
+{
+    int retorno=0;
+   // system("cls");
+    vista_ShowTitulo("\n\t\tSELECCIONAR EL NIVEL DE VENDEDORES\n");
+    choice=tools_PedirEntero("Ingrese el Nro de nivel del vendedor (0,1,2):\n");//se puede pasar por parametro del main??
+    if(choice ==0 || choice==1 || choice==2)
+    {
+        retorno=choice;
+    }
+    else
+    {
+        printf("Debe ingresar una opcion valida (0,1,2)");
+    }
+    return retorno;
+}
+
+

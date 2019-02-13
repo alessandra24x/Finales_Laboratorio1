@@ -8,18 +8,20 @@
 #include "Vista.h"
 
 #define NOM_ARCH "data.csv"
-#define NOM_ARCH2 "data2.csv"
+#define NOM_ARCH2 "JUNIOR.csv"
 
 
 
 int main()
 {
 
-    int opcion;
+    int opcion,choice;
     char seguir='S';
 
      ArrayList *ListaVentas;
     ListaVentas=al_newArrayList();
+    ArrayList *ListaAux;
+    ListaAux=al_newArrayList();
 
 
      if(ListaVentas!=NULL)
@@ -38,7 +40,7 @@ int main()
                 if(ListaVentas !=NULL)
                 {
                      vista_MuestraElementos(ListaVentas,"LISTA DE VENTAS","POR VENDEDORES",vista_MuestraUnElemento,0,ListaVentas->len(ListaVentas),25);
-                     //GuardarArchivoT(ListaVentas,NOM_ARCH2);
+
                 }
                 else
                     printf("NADA PARA MOSTRAR");
@@ -56,13 +58,28 @@ int main()
                         printf("No se pudieron calcular todos\n");
                     break;
             case 4:
+                system("cls");
+                choice=ventas_SeleccionarNivel(ListaVentas);
+                switch (choice)
+                    {
+                    case 0:
+                        ListaAux=al_filter(ListaVentas, funcionQuefiltra0);
+                        if(ListaAux !=NULL)
+                        {
+                            vista_MuestraElementos(ListaAux,"VENDEDORES","COMISIONES DE NIVEL JUNIOR",vista_MuestraUnElemento,0,ListaAux->len(ListaAux),25);
+                            GuardarArchivoT(ListaAux,NOM_ARCH2);
+                        }
 
-                break;
+                        break;
+                    case 1:
+                        ListaAux=al_filter(ListaVentas, funcionQuefiltra1);
+                        break;
+                    case 2:
+                        ListaAux=al_filter(ListaVentas, funcionQuefiltra2);
+                        break;
+                    }
             case 0:
                 seguir='N';
-
-
-
 
             }
 

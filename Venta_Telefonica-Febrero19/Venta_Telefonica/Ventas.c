@@ -210,6 +210,126 @@ int CalcularSalary(eVentas* element)
     return retorno;
     }//fin if(element !=)
 
+/*int est_compara_elementos_Estructura(void* pElementA,void* pElementB)
+{
+    int retorno=-1;
+    void *tmp_1;
+    void *tmp_2;
+    tmp_1=(void* ) pElementA;
+    tmp_2=(void * ) pElementB;
+
+   if(tmp_1-> > tmp_2->void)
+    {
+        retorno=1;
+    }
+    else
+    {
+        if(tmp_1->letra < tmp_2->letra)
+        {
+            retorno=0;
+        }
+    }
+    return retorno;
+}*/
+
+int compara_elementos_Estructura(void* pElementA,void* pElementB)
+{
+    int retorno=0;
+    eVentas *tmp_1;
+    eVentas *tmp_2;
+    tmp_1=(eVentas * ) pElementA;
+    tmp_2=(eVentas * ) pElementB;
+
+    if(tmp_1->nivel > tmp_2->nivel)
+    {
+        retorno=1;
+    }
+    else
+    {
+        retorno=-1;
+        if(tmp_1->nivel < tmp_2->nivel)
+        {
+            retorno=1;
+        }
+    }
+    return retorno;
+}
+int funcionQuefiltra0(eVentas* item)
+{
+ int retorno=-1;
+ if(ventas_get_nivel(item)==0)
+ {
+     retorno=0;
+ }
+ return retorno;
+}
+int funcionQuefiltra1(eVentas* item)
+{
+ int retorno=-1;
+ if(ventas_get_nivel(item)==1)
+ {
+     retorno=0;
+ }
+ return retorno;
+}
+int funcionQuefiltra2(eVentas* item)
+{
+ int retorno=-1;
+ if(ventas_get_nivel(item)==2)
+ {
+     retorno=0;
+ }
+ return retorno;
+}
+
+int ventas_SeleccionarNivel(ArrayList* this)
+{
+    int retorno=-1;
+    char resp;
+    eVentas* niv;
+    int opcion;
+    ArrayList *ListaAux;
+    ListaAux=al_newArrayList();
+
+    printf("====================================================\n");
+    printf("|\t0-JUNIOR\t1-ESTANDARD\t2-EXPERTO\t|\n");
+    printf("====================================================\n");
+  //  system("pause");
+    switch(vista_Pedir_Nivel(opcion))
+    {
+    case 0:
+
+      resp=Responder("Confirma seleccion de Nivel JUNIOR? (S/N)");
+          if(resp='S')
+          {
+              retorno=0;
+          }
+          break;
+    case 1:
+        resp=Responder("Confirma seleccion de Nivel ESTANDARD? (S/N)");
+          if(resp='S')
+          {
+              retorno=1;
+          }
+          break;
+    case 2:
+        resp=Responder("Confirma seleccion de Nivel EXPERTO? (S/N)");
+          if(resp='S')
+          {
+              retorno=2;
+          }
+          break;
+
+         }
+
+return retorno;
+      }
+
+
+
+
+
+
 
 
 
