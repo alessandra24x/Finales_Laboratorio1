@@ -157,7 +157,7 @@
 	"Gestion.h"
 	"Tools.h"
 
-1550082201 source:c:\eli\utn\practica finales labi\finales_laboratorio1\venta_telefonica-febrero19\venta_telefonica\archivo.c
+1550154022 source:c:\eli\utn\practica finales labi\finales_laboratorio1\venta_telefonica-febrero19\venta_telefonica\archivo.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -173,7 +173,7 @@
 
 1549890914 c:\eli\utn\practica finales labi\finales_laboratorio1\venta_telefonica-febrero19\venta_telefonica\gestion.h
 
-1549890914 c:\eli\utn\practica finales labi\finales_laboratorio1\venta_telefonica-febrero19\venta_telefonica\tools.h
+1550150862 c:\eli\utn\practica finales labi\finales_laboratorio1\venta_telefonica-febrero19\venta_telefonica\tools.h
 
 1550060815 c:\eli\utn\practica finales labi\finales_laboratorio1\venta_telefonica-febrero19\venta_telefonica\vista.h
 
@@ -197,7 +197,7 @@
 
 1549890914 c:\eli\utn\practica finales labi\finales_laboratorio1\venta_telefonica-febrero19\venta_telefonica\estructura.h
 
-1550145884 source:c:\eli\utn\practica finales labi\finales_laboratorio1\venta_telefonica-febrero19\venta_telefonica\main.c
+1550152204 source:c:\eli\utn\practica finales labi\finales_laboratorio1\venta_telefonica-febrero19\venta_telefonica\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -206,7 +206,7 @@
 	"Tools.h"
 	"Vista.h"
 
-1550061999 source:c:\eli\utn\practica finales labi\finales_laboratorio1\venta_telefonica-febrero19\venta_telefonica\tools.c
+1550152781 source:c:\eli\utn\practica finales labi\finales_laboratorio1\venta_telefonica-febrero19\venta_telefonica\tools.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -215,8 +215,9 @@
 	"Estructura.h"
 	"Gestion.h"
 	"Vista.h"
+	"Ventas.h"
 
-1550145370 source:c:\eli\utn\practica finales labi\finales_laboratorio1\venta_telefonica-febrero19\venta_telefonica\ventas.c
+1550146001 source:c:\eli\utn\practica finales labi\finales_laboratorio1\venta_telefonica-febrero19\venta_telefonica\ventas.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

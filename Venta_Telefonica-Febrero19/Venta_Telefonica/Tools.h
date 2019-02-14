@@ -66,7 +66,7 @@ void tools_RemoveSpaces(char* source);
  */
 int tools_PedirEntero(char mensaje[]);
 
-
+int tools_ComparaNombre(void* eEmpleadoA,void* eEmpleadoB);
 
 
 ArrayList* Compara_2ArrayList(ArrayList* this,ArrayList* that,int (*pFunc)(void*,void*));

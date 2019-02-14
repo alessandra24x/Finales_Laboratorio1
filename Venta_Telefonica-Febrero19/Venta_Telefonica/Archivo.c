@@ -224,6 +224,58 @@ int GuardarArchivoT(ArrayList* this, const char* nombre)
         }
         return retorno;
 }
+
+int arch_Alta_Empleado(ArrayList* this)
+{
+    int retorno=-1;
+    int i,id;
+    char resp;
+    if(this !=NULL)
+    {
+        eVentas* emp;
+        eVentas aux;
+        retorno=0;
+        do
+        {
+            system("cls");
+            vista_ShowTitulo("INGRESO EMPLEADOS");
+            aux.id=tools_siguienteId(this,ventas_get_id);
+
+            vista_ingresarTexto(aux.nombre_vendedor,20,"Ingrese el nombre:\n");
+          //  ingresarTexto(aux.,25,"Ingrese la direccion:\n");
+            aux.nivel=tools_ingresarInt("Nivel",0,2);
+            aux.cantidad_productos_vendidos=tools_ingresarInt("Ingrese la cantidad de productos vendidos",1,200);
+            aux.monto_vendido=tools_ingresarFloat("Ingrese el monto",10,75000);
+
+            emp=ventas_nuevoVendedor(aux.id,aux.nombre_vendedor,aux.nivel,aux.cantidad_productos_vendidos,aux.monto_vendido);
+            ventas_set_monto(emp,aux.monto_vendido);
+
+            if(emp !=NULL)
+            {
+                retorno=1;
+                system("cls");
+                vista_MuestraUnElemento(emp);
+                resp=Responder("Confirma el ingreso de este empleado?(S/N)");
+                if(resp=='N')
+                {
+                    printf("Operacion cancelada\n");
+                    system("pause");
+                }
+                else if(resp=='S')
+                {
+                    this->add(this,emp);
+                    this->sort(this,tools_ComparaNombre,1);
+                }
+
+            }
+
+        }while(Responder("Continua ingresando: (S/N)")=='S');
+
+    }//fin if(this !=NULL)
+}
+
+
+
 //FALTA CARGAR Y GUARDAR ARCHIVO BINARIO
 //********************************************************
 /*int Estr_borrar_elemento(ArrayList* this,ArrayList* that)

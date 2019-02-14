@@ -7,6 +7,7 @@
 #include "Estructura.h"
 #include "Gestion.h"
 #include "Vista.h"
+#include "Ventas.h"
 
 
 
@@ -58,6 +59,21 @@ int tools_ingresarInt (char pregunta[], int minimo,int maximo)
     }
     return numero;
 }
+int tools_ingresarFloat (char pregunta[], int minimo,int maximo)
+{
+    float numero;
+    printf("%s\t", pregunta);
+    fflush(stdin);
+    scanf("%f", &numero);
+
+    while(numero>maximo|| numero<minimo|| isalpha(numero))
+    {
+        fflush(stdin);
+        printf("\nReingrese %s\t", pregunta);
+        scanf("%f", &numero);
+    }
+    return numero;
+}
 
 int tools_ValidarCantCaracteres(char* cadena,int cantidad)
 {
@@ -96,7 +112,43 @@ int tools_PedirEntero(char mensaje[])
     return auxiliar;
 }
 
+int tools_siguienteId(ArrayList* this, int (*pGetId)(void*))
+{
+    int returnAux = -1;
+    eVentas* pElement;
+    int i;
 
+    if(this != NULL && (*pGetId) != NULL)
+    {
+        returnAux = 0;
+        for(i=0 ; i<this->len(this) ; i++)
+        {
+            pElement = this->get(this, i);
+
+            if((*pGetId)(pElement) > returnAux)
+            {
+                returnAux = (*pGetId)(pElement);
+            }
+        }
+    }
+    return (returnAux+1);
+}
+
+int tools_ComparaNombre(void* eEmpleadoA,void* eEmpleadoB)
+{
+    int retorno=-1;
+    if (strcmp(((eVentas*)eEmpleadoA)->nombre_vendedor,((eVentas*)eEmpleadoB)->nombre_vendedor)==1)
+    {
+      retorno=1;
+    }
+    else if (strcmp(((eVentas*)eEmpleadoA)->nombre_vendedor,((eVentas*)eEmpleadoB)->nombre_vendedor)==-1)
+    {
+      retorno=0;
+
+    }
+    return retorno;
+
+}
 /*int tools_ComparaFrases(char* frase1,char* frase2)
  {
     char aux[20]={};
