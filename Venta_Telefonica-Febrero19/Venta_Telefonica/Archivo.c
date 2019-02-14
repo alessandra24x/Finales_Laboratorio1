@@ -206,8 +206,6 @@ int GuardarArchivoT(ArrayList* this, const char* nombre)
                     {
                     record = (void*)al_get(this, i);
                     fprintf(f,MASCARA_ARCHIVO2,ventas_get_id(record),ventas_get_nombre_vendedor(record),ventas_get_nivel(record),ventas_get_CantVend(record),ventas_get_monto(record),ventas_get_comision(record));
-                   // printf("%d",record->id);
-                   // printf("%s",record->nombre_vendedor);
                     retorno=1;
                     }//fin for
                     }//fin if(aux!=NULL)

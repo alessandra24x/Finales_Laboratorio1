@@ -18,10 +18,11 @@ int main()
     int opcion,choice;
     char seguir='S';
 
-     ArrayList *ListaVentas;
+    ArrayList *ListaVentas;
     ListaVentas=al_newArrayList();
     ArrayList *ListaAux;
     ListaAux=al_newArrayList();
+    eVentas* vendedor;
 
 
      if(ListaVentas!=NULL)
@@ -61,24 +62,26 @@ int main()
             case 4:
                 system("cls");
                 choice=ventas_SeleccionarNivel(ListaVentas);
-                switch (choice)
+                ListaAux=al_filter(ListaVentas,funcionQuefiltra(vendedor,choice));
+
+             /*   switch (choice)
                     {
                     case 0:
-                        ListaAux=al_filter(ListaVentas, funcionQuefiltra0);
+                        ListaAux=al_filter(ListaVentas, funcionQuefiltra0);*/
                         if(ListaAux !=NULL)
                         {
                             vista_MuestraElementos(ListaAux,"VENDEDORES","COMISIONES DE NIVEL JUNIOR",vista_MuestraUnElemento,0,ListaAux->len(ListaAux),25);
                             GuardarArchivoT(ListaAux,NOM_ARCH2);
                         }
 
-                        break;
+               /*         break;
                     case 1:
                         ListaAux=al_filter(ListaVentas, funcionQuefiltra1);
                         break;
                     case 2:
                         ListaAux=al_filter(ListaVentas, funcionQuefiltra2);
                         break;
-                    }
+                    }*/
             case 0:
                 seguir='N';
 

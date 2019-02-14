@@ -254,10 +254,11 @@ int compara_elementos_Estructura(void* pElementA,void* pElementB)
     }
     return retorno;
 }
-int funcionQuefiltra0(eVentas* item)
+int funcionQuefiltra(eVentas* item, int nivel)
 {
  int retorno=-1;
- if(ventas_get_nivel(item)==0)
+ printf("%d",item->nivel);
+ if(ventas_get_nivel(item)==nivel)
  {
      retorno=0;
  }

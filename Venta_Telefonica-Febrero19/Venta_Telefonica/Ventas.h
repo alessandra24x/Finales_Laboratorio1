@@ -30,6 +30,6 @@ int ventas_get_CantVend(eVentas* this);
 char* ventas_get_nombre_vendedor(eVentas* this);
 int ventas_set_nombre_vendedor(eVentas* this, char* texto);
 
-int funcionQuefiltra0(eVentas* item);
+int funcionQuefiltra(eVentas* item, int num);
 int funcionQuefiltra2(eVentas* item);
 int funcionQuefiltra1(eVentas* item);
