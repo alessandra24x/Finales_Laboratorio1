@@ -70,3 +70,4 @@ int tools_ComparaNombre(void* eEmpleadoA,void* eEmpleadoB);
 
 
 ArrayList* Compara_2ArrayList(ArrayList* this,ArrayList* that,int (*pFunc)(void*,void*));
+char Valida_confirmacion(char mensaje[]);

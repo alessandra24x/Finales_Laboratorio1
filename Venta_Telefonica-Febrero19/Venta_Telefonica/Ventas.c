@@ -278,6 +278,7 @@ int funcionQuefiltra2(eVentas* item)
  int retorno=-1;
  if(ventas_get_nivel(item)==2)
  {
+
      retorno=0;
  }
  return retorno;
@@ -326,7 +327,104 @@ int ventas_SeleccionarNivel(ArrayList* this)
 return retorno;
       }
 
+int ventas_buscarNombre(ArrayList* this, char nom[])
+{
+    int retorno=0;
+    int i,valor;
+    eVentas* emp;
+    if(this!=NULL && nom !=NULL)
+    {
+        if(this->isEmpty(this)==0)
+       {
+        retorno=1;
+    //    if(emp !=NULL)
+    //    {
+            for(i=0;i<this->len(this);i++)
+            {
+            emp=this->get(this,i);
+          //  if()
+           // if(ventas_get_nombre_vendedor(emp)==nom)
+            valor=strcmp(ventas_get_nombre_vendedor(emp),nom);
+            if(valor==0)
+            {
+                retorno=i;
+                break;
+            }//fin if
+            else if(valor !=0)
+            {
+                retorno=-1;
+            }
+            }//fin for
+//        }//fin if(emp)
+        }
+    }//fin if(this!)
+    return retorno;
+}
+eVentas* BuscaMaximo(ArrayList* this, int (*pFunc)(void* ,void*),int valor)
+{
+   int returnAux = -1;
+    ArrayList* aux;
+    int i=0;
+    eVentas *emp;
 
+    if(this!= NULL && pFunc!=NULL && (valor==0 || valor==1))
+    {
+        if(aux!=NULL)
+        {
+            aux=(al_get(this,i));
+            for(i=1;i < al_len(this)-1;i++)
+            {
+                if(valor==1)
+                {
+                    if(pFunc(aux,al_get(this,i))==1)
+                    {
+                       emp=aux;
+                       returnAux=0;
+                    }//fin if(pfunc)
+                    else
+                    {
+                        aux=al_get(this,i);
+                        emp=aux;
+                    }
+
+                    }//fin if(valor)
+                if(valor==0)
+                {
+                    if(pFunc(aux,al_get(this,i))==-1)
+                    {
+                        emp=aux;
+                      //  aux=al_get(this,i);
+                    }
+                else
+                {
+                 aux=al_get(this,i);
+                 emp=aux;
+                }
+                returnAux=0;
+                }//fin if
+            }//fin 1er for
+          //  } //fin 2do for
+        }//fin 1er for
+    }
+
+    return emp;
+}
+int comparaVendedor(void* eEmpleadoA,void* eEmpleadoB)
+{
+ //   eEmpleado *eEmpleadoA;
+ //   eEmpleado *eEmpleadoB;
+    if(((eVentas*)eEmpleadoA)->cantidad_productos_vendidos > ((eVentas*)eEmpleadoB)->cantidad_productos_vendidos)
+    {
+        return 1;
+    }
+    if(((eVentas*)eEmpleadoA)->cantidad_productos_vendidos < ((eVentas*)eEmpleadoB)->cantidad_productos_vendidos)
+    {
+        return -1;
+    }
+    return 0;
+
+
+}
 
 
 

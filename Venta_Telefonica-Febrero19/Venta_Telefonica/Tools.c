@@ -32,6 +32,34 @@ void tools_ValidaMenu(int opcion,int limite_inferior,int limite_superior)
      if(opcion <limite_inferior || opcion >limite_superior)
         printf("Debe elegir una opcion entre %d y %d: \n",limite_inferior,limite_superior);
 }
+char Valida_confirmacion(char mensaje[])
+ {
+   char retorno;
+   printf("\n%s (S/N): ", mensaje);
+   fflush(stdin);
+   scanf("%c", &retorno);
+   do
+   {
+      switch(retorno)
+      {
+         case 'S':
+         case 's':
+            retorno = 'S';
+            break;
+         case 'N':
+         case 'n':
+            retorno = 'N';
+            break;
+         default:
+            printf("\nPor favor ingrese 'S' o 'N': ");
+            fflush(stdin);
+            scanf("%c", &retorno);
+            break;
+      }
+   }
+   while(retorno != 'S' && retorno != 'N');
+   return retorno;
+}
 int funcionFiltro(void* aux)
 {
     int retorno=0;

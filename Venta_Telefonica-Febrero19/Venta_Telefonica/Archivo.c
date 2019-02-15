@@ -11,6 +11,7 @@
 
 
 #define MASCARA_ARCHIVO "%[^,],%[^,],%[^,],%[^,],%[^\n]\n" //defino aca la mascara para el parser de mensajes
+#define MASCARA_ARCHIVO2 "%[^,],%[^,],%[^,],%[^,],%[^\n]\n"
 #define MASCARA_ARCHIVO2 "%[^,],%[^,],%[^,],%[^,],%[^,],%[^\n]\n" //defino la mascara para los usuarios
 //#define MASCARA_ARCHIVO_FEED "%d,%s,%d,%d,%s,%d\n"
 #define TIENE_ENCABEZADO 1
@@ -206,6 +207,8 @@ int GuardarArchivoT(ArrayList* this, const char* nombre)
                     {
                     record = (void*)al_get(this, i);
                     fprintf(f,MASCARA_ARCHIVO2,ventas_get_id(record),ventas_get_nombre_vendedor(record),ventas_get_nivel(record),ventas_get_CantVend(record),ventas_get_monto(record),ventas_get_comision(record));
+                    printf("%d\t",record->id);
+                    printf("%s\n",record->nombre_vendedor);
                     retorno=1;
                     }//fin for
                     }//fin if(aux!=NULL)
@@ -274,7 +277,60 @@ int arch_Alta_Empleado(ArrayList* this)
     }//fin if(this !=NULL)
 }
 
+int arch_borrar(ArrayList* this)
+{
+    int retorno=-1;
+    int cod_emp,indice;
+    char resp;
+    char nom[20];
+    eVentas* emp;
 
+    if(this !=NULL)
+    {
+        retorno=0;
+        printf("Ingrese el nombre del Vendedor\n");
+        fflush(stdin);
+        scanf("%s",nom);
+        printf("hola\n");
+        printf("%s",nom);
+     //   nom=RemoveSpaces(nom);
+        if(nom !=NULL)
+        {
+           // indice=emp_buscarId(this,cod_emp);
+            indice=ventas_buscarNombre(this,nom);
+            emp=al_get(this,indice);
+            if(emp ==NULL)
+            {
+             printf("No se encontro el vendedor:\n");
+             system("pause");
+             retorno=-1;
+            }
+            else if(emp !=NULL)
+            {
+            vista_MuestraUnElemento(emp);
+            resp=Valida_confirmacion("Confirma dar de baja este vendedor?");
+            if(resp=='N')
+                {
+                    printf("Operacion cancelada\n");
+                }
+                else if(resp=='S')
+                {
+                  emp = this->pop(this, emp);
+                  free(emp);
+                  this->sort(this,tools_ComparaNombre,1);
+                 // data_actualizarArchivo(that,NOM_ARCH2);
+                }
+            }//fin else emp !=NULL
+
+         }//fin if(cod_emp)
+
+    }//fin if(this)
+    if(retorno==1)
+    {
+        printf("se dio de baja exitosamente:\n");
+    }
+    return retorno;
+}
 
 //FALTA CARGAR Y GUARDAR ARCHIVO BINARIO
 //********************************************************

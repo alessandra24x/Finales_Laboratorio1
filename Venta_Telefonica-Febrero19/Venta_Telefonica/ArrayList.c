@@ -727,6 +727,28 @@ ArrayList* al_filter(ArrayList* this ,int (*Pfunc)(void*))
     }
     return ListaAux;
 }
+//ArrayList* al_filterListaPorNivel(ArrayList* this, int(*pFunc)(void*,int), int nivel)
+ArrayList* al_filterListaPorNivel(ArrayList* this ,int (*pFunc)(void*, int), int nivel)
+//ArrayList* al_filterListaPorNivel(ArrayList* this ,(int(Pfunc*)(void*, void*)), int nivel)
+{
+    int i;
+	ArrayList* lista=al_newArrayList();
+	if(this !=NULL && pFunc !=NULL)
+	{
+		for(i=0;i<(this->len(this));i++)
+		{
+			if(pFunc(this->get(this,i),nivel)==0)
+			{
+				al_add(lista,this->get(this,i));
+			}
+		}
+
+	}
+	return lista;
+
+
+}
+
 ArrayList* al_eliminaDuplicados(ArrayList* this, int (*pFunc)(void* ,void*))
 {
     ArrayList* ListAux;

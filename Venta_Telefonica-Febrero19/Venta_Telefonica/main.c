@@ -29,9 +29,9 @@ int main()
     {
         while(seguir=='S')
         {
-            vista_ShowMenu("\n1:Cargar Archivos\n2:Listar Vendedores\n3:Calcular Comisiones\n4:Generar Archivo de Comisiones\n5:Agregar vendedores\n");
+            vista_ShowMenu("\n1: Cargar Archivos\n2: Listar Vendedores\n3: Calcular Comisiones\n4: Generar Archivo de Comisiones\n5: Agregar vendedores\n6: Dar de baja un Vendedor\n7: El que mas vendio\n");
             scanf("%d",&opcion);
-            tools_ValidaMenu(opcion,0,3);
+            tools_ValidaMenu(opcion,0,7);
             switch(opcion)
             {
             case 1:
@@ -62,7 +62,8 @@ int main()
             case 4:
                 system("cls");
                 choice=ventas_SeleccionarNivel(ListaVentas);
-                ListaAux=al_filter(ListaVentas,funcionQuefiltra(vendedor,choice));
+                ListaAux=al_filterListaPorNivel(ListaVentas,funcionQuefiltra, choice);
+               // ListaAux=al_filter(ListaVentas,funcionQuefiltra(vendedor,choice));
 
              /*   switch (choice)
                     {
@@ -82,9 +83,18 @@ int main()
                         ListaAux=al_filter(ListaVentas, funcionQuefiltra2);
                         break;
                     }*/
+                    break;
                     case 5:
                         arch_Alta_Empleado(ListaVentas);
                         break;
+                    case 6:
+                        vista_MuestraElementos(ListaVentas,"LISTADO DE VENDEDORES","CON SUS COMISIONES",vista_MuestraUnElemento,0,ListaVentas->len(ListaVentas),25);
+                        arch_borrar(ListaVentas);
+                        break;
+                    case 7:
+                        vendedor=BuscaMaximo(ListaVentas,comparaVendedor,0);
+                        vista_MuestraUnElemento(vendedor);
+
             case 0:
                 seguir='N';
 

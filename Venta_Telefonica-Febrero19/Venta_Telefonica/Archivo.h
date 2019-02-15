@@ -35,3 +35,5 @@ int parserEstructura(FILE* pFile, ArrayList* this);
 int GuardarArchivoT(ArrayList* this, const char* nombre);
 
 int parserEstructuraUsuario(FILE* pFile, ArrayList* this);
+
+int arch_borrar(ArrayList* this);

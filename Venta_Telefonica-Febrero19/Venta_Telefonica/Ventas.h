@@ -33,3 +33,6 @@ int ventas_set_nombre_vendedor(eVentas* this, char* texto);
 int funcionQuefiltra(eVentas* item, int num);
 int funcionQuefiltra2(eVentas* item);
 int funcionQuefiltra1(eVentas* item);
+int ventas_buscarNombre(ArrayList* this, char nom[]);
+eVentas* BuscaMaximo(ArrayList* this, int (*pFunc)(void* ,void*),int valor);
+int comparaVendedor(void* eEmpleadoA,void* eEmpleadoB);
