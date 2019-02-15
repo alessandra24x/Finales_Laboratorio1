@@ -96,7 +96,7 @@ int main()
                         arch_borrar(ListaVentas);
                         break;
                     case 7:
-                        vendedor=BuscaMaximo(ListaVentas,comparaVendedor,0);
+                        vendedor=BuscaMaximo(ListaVentas,comparaVendedor,1);
                         system("cls");
                         printf("========================================================================\n");
                         printf("  ID\t  NOMBRE\tNIVEL\tCANTIDAD VENDIDA\tMONTO\tCOMISION\n");

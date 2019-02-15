@@ -324,8 +324,13 @@ int ventas_SeleccionarNivel(ArrayList* this)
 
          }
 
-return retorno;
-      }
+         if(retorno=-1)
+         {
+             printf("Operación Cancelada\n");
+             system("pause");
+         }
+         return retorno;
+}
 
 int ventas_buscarNombre(ArrayList* this, char nom[])
 {
