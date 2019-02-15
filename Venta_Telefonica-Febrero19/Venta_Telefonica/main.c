@@ -9,6 +9,8 @@
 
 #define NOM_ARCH "data.csv"
 #define NOM_ARCH2 "JUNIOR.csv"
+#define NOM_ARCH3 "ESTANDAR.csv"
+#define NOM_ARCH4 "EXPERTO.csv"
 
 
 
@@ -63,26 +65,28 @@ int main()
                 system("cls");
                 choice=ventas_SeleccionarNivel(ListaVentas);
                 ListaAux=al_filterListaPorNivel(ListaVentas,funcionQuefiltra, choice);
-               // ListaAux=al_filter(ListaVentas,funcionQuefiltra(vendedor,choice));
-
-             /*   switch (choice)
-                    {
-                    case 0:
-                        ListaAux=al_filter(ListaVentas, funcionQuefiltra0);*/
                         if(ListaAux !=NULL)
                         {
-                            vista_MuestraElementos(ListaAux,"VENDEDORES","COMISIONES DE NIVEL JUNIOR",vista_MuestraUnElemento,0,ListaAux->len(ListaAux),25);
-                            GuardarArchivoT(ListaAux,NOM_ARCH2);
+                            switch (choice)
+                            {
+                            case 0:
+                                vista_MuestraElementos(ListaAux,"VENDEDORES","COMISIONES DE NIVEL JUNIOR",vista_MuestraUnElemento,0,ListaAux->len(ListaAux),25);
+                                GuardarArchivoT(ListaAux,NOM_ARCH2);
+                                break;
+
+
+                            case 1:
+                                vista_MuestraElementos(ListaAux,"VENDEDORES","COMISIONES DE NIVEL ESTANDARD",vista_MuestraUnElemento,0,ListaAux->len(ListaAux),25);
+                                GuardarArchivoT(ListaAux,NOM_ARCH3);
+                                break;
+
+                            case 2:
+                                vista_MuestraElementos(ListaAux,"VENDEDORES","COMISIONES DE NIVEL EXPERTO",vista_MuestraUnElemento,0,ListaAux->len(ListaAux),25);
+                                GuardarArchivoT(ListaAux,NOM_ARCH4);
+                                break;
+                            }
                         }
 
-               /*         break;
-                    case 1:
-                        ListaAux=al_filter(ListaVentas, funcionQuefiltra1);
-                        break;
-                    case 2:
-                        ListaAux=al_filter(ListaVentas, funcionQuefiltra2);
-                        break;
-                    }*/
                     break;
                     case 5:
                         arch_Alta_Empleado(ListaVentas);
@@ -93,8 +97,14 @@ int main()
                         break;
                     case 7:
                         vendedor=BuscaMaximo(ListaVentas,comparaVendedor,0);
+                        system("cls");
+                        printf("========================================================================\n");
+                        printf("  ID\t  NOMBRE\tNIVEL\tCANTIDAD VENDIDA\tMONTO\tCOMISION\n");
+                        printf("=========================================================================\n");
                         vista_MuestraUnElemento(vendedor);
-
+                        printf("-------------------------------------------------------------------------\n");
+                        system("pause");
+                        break;
             case 0:
                 seguir='N';
 

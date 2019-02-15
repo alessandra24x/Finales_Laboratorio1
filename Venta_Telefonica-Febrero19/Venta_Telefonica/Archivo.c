@@ -11,8 +11,8 @@
 
 
 #define MASCARA_ARCHIVO "%[^,],%[^,],%[^,],%[^,],%[^\n]\n" //defino aca la mascara para el parser de mensajes
-#define MASCARA_ARCHIVO2 "%[^,],%[^,],%[^,],%[^,],%[^\n]\n"
-#define MASCARA_ARCHIVO2 "%[^,],%[^,],%[^,],%[^,],%[^,],%[^\n]\n" //defino la mascara para los usuarios
+#define MASCARA_ARCHIVO2 "%d,%s,%d,%d,%.2f,%.2f\n"
+//#define MASCARA_ARCHIVO2 "%[^,],%[^,],%[^,],%[^,],%[^,],%[^\n]\n" //defino la mascara para los usuarios
 //#define MASCARA_ARCHIVO_FEED "%d,%s,%d,%d,%s,%d\n"
 #define TIENE_ENCABEZADO 1
 
@@ -207,8 +207,6 @@ int GuardarArchivoT(ArrayList* this, const char* nombre)
                     {
                     record = (void*)al_get(this, i);
                     fprintf(f,MASCARA_ARCHIVO2,ventas_get_id(record),ventas_get_nombre_vendedor(record),ventas_get_nivel(record),ventas_get_CantVend(record),ventas_get_monto(record),ventas_get_comision(record));
-                    printf("%d\t",record->id);
-                    printf("%s\n",record->nombre_vendedor);
                     retorno=1;
                     }//fin for
                     }//fin if(aux!=NULL)
