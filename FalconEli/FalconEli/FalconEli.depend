@@ -1,0 +1,65 @@
+# depslib dependency file v1.0
+1550235592 source:c:\test\falconeli\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1550235592 c:\test\falconeli\arraylist.h
+
+1550271059 source:c:\test\falconeli\archivo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Cliente.h"
+	"Tools.h"
+
+1550235592 c:\test\falconeli\ventas.h
+
+1550235592 c:\test\falconeli\tools.h
+
+1550271905 source:c:\test\falconeli\cliente.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Cliente.h"
+	"Tools.h"
+
+1550268773 c:\test\falconeli\cliente.h
+
+1550272376 source:c:\test\falconeli\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Cliente.h"
+	"Tools.h"
+	"Archivo.h"
+	"Vista.h"
+
+1550235592 c:\test\falconeli\archivo.h
+
+1550268376 source:c:\test\falconeli\vista.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Cliente.h"
+	"Tools.h"
+
+1550235592 c:\test\falconeli\vista.h
+
+1550262040 source:c:\test\falconeli\tools.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Archivo.h"
+	"Estructura.h"
+	"Vista.h"
+	"Ventas.h"
+
+1550235592 c:\test\falconeli\estructura.h
+
